@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import MyButton from '../config/components/MyButton';
 import MyInput from '../config/components/MyInput';
 import { logIn } from '../config/firebase/firebaseMethods';
@@ -118,6 +118,18 @@ function LogIn() {
                             thickness={7}
                             loaderColor="primary"
                         />
+                    </Box>
+                    <Box
+                        sx={{
+                            
+                            height: "22%",
+                            display: "flex",
+                            alignItems: "end",
+                            paddingLeft: "20px"
+                        }
+                        }
+                    >
+                        <Link to={'/signup'}>Create New User</Link>
                     </Box>
                 </Box>
             </Box>
