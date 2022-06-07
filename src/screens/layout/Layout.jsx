@@ -22,6 +22,10 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import News from '../News';
 import PersonalVideoIcon from '@mui/icons-material/PersonalVideo';
+import { useParams } from 'react-router-dom'
+import { getData } from '../../config/firebase/firebaseMethods';
+import Home from '../Home';
+
 
 const drawerWidth = 240;
 
@@ -114,7 +118,14 @@ export default function Layout() {
         navigate(item.route);
     }
 
+    const params = useParams();
 
+
+    React.useEffect(() => {
+
+
+
+    }, [])
 
 
     return (
@@ -175,8 +186,11 @@ export default function Layout() {
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
 
+
                 <Routes>
                     <Route path="news" element={<News />} />
+                    <Route path="" element={<Home />} />
+                    
                 </Routes>
 
 
