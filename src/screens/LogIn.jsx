@@ -60,6 +60,10 @@ function LogIn() {
                     boxShadow: '0px 0px 4px 0.2px',
                     height: '70vh',
                     width: '60vh',
+                    position: 'relative',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'start',
                 }}>
                     <Box>
                         <Typography
@@ -121,11 +125,12 @@ function LogIn() {
                     </Box>
                     <Box
                         sx={{
-                            
-                            height: "22%",
+                            height: "7%",
                             display: "flex",
                             alignItems: "end",
-                            paddingLeft: "20px"
+                            position: 'absolute',
+                            right: '15px',
+                            bottom: '15px'
                         }
                         }
                     >

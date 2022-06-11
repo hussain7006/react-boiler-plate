@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import MyButton from '../config/components/MyButton';
 import MyInput from '../config/components/MyInput';
 import { signUp, sendData } from '../config/firebase/firebaseMethods';
@@ -66,8 +66,13 @@ function SignUp() {
                     // border: '2px solid',
                     borderRadius: '10px',
                     boxShadow: '0px 0px 4px 0.2px',
-                    height: '70vh',
+                    height: '75vh',
                     width: '60vh',
+                    position: 'relative',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'start',
+
                 }}>
                     <Box>
                         <Typography
@@ -134,6 +139,20 @@ function SignUp() {
                             width="95px"
                             thickness={7}
                         />
+                    </Box>
+                    <Box
+                        sx={{
+                            height: "7%",
+                            display: "flex",
+                            alignItems: "end",
+                            paddingLeft: "20px",
+                            position: 'absolute',
+                            right: '15px',
+                            bottom: '15px'
+                        }
+                        }
+                    >
+                        <Link to={'/'}>Already Registered</Link>
                     </Box>
                 </Box>
             </Box>

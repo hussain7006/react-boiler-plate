@@ -1,6 +1,6 @@
 import app from "./firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getDatabase, ref, set, onValue } from "firebase/database";
+import { getDatabase, ref, set, onValue, get, push, child } from "firebase/database";
 
 const auth = getAuth(app);
 const database = getDatabase(app);
@@ -24,23 +24,18 @@ let checkUser = () => { }
 // Database methods
 
 let sendData = (obj, nodeName, id) => {
-    console.log(obj);
-    console.log(nodeName);
-    console.log(id);
-    console.log();
-    let reference = ref(database, `${nodeName}/${id ? id : ""}/`)
+    if (!id) {
+        const postListRef = ref(database, 'posts');
+        obj.id = push(postListRef).key;
+    }
+    let reference = ref(database, `${nodeName}/${obj.id ? obj.id : id}/`)
     return set(reference, obj);
 }
 
 let getData = (nodeName, id) => {
-    let users = {}
-    let reference = ref(database, `${nodeName}/${id ? id : ""}`)
-    onValue(reference, (snapshot) => {
-        users = snapshot.val()
-    }, {
-        onlyOnce: false
-    });
-    return users;
+
+    let reference = ref(database)
+    return get(child(reference, `${nodeName}/${id ? id : ""}`))
 }
 
 export {

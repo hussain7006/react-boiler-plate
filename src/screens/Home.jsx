@@ -9,24 +9,23 @@ function Home() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        
-        if(params.id){
-            navigate(`/home/:${params.id}`)
-        }else{
+
+        if (params.id) {
+            navigate(`/home/${params.id}`)
+        } else {
             navigate('/login')
         }
-        async function collecUserData() {
-            let userData = await getData('users', params.id);
-            return userData;
-    
-        }
 
-        collecUserData().then((res) => {
-            console.log('====================================');
-            console.log(res);
-            console.log('====================================');
-            setUsers(res)
-        }).catch((err) => console.log(err));
+        getData('todos').then((snapshot) => {
+            if (snapshot.exists()) {
+                console.log(snapshot.val());
+            } else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
 
     }, [])
     return (
@@ -34,13 +33,14 @@ function Home() {
             <Typography variant='h1'>Home Page</Typography>
 
             <Box>
-                {users.length > 0 ?
+                {/* {users.length > 0 ?
                     <Box>
                         {users.map((e, i) => <li>{e.name}</li>)}
                     </Box> :
                     <Box>
                         <Typography variant='h4'>Loading...</Typography>
-                    </Box>}
+                    </Box>
+                } */}
             </Box>
         </Box>
     )

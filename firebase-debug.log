@@ -1,0 +1,602 @@
+[debug] [2022-06-07T13:25:59.985Z] ----------------------------------------------------------------------
+[debug] [2022-06-07T13:25:59.987Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hussa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-06-07T13:25:59.988Z] CLI Version:   10.5.0
+[debug] [2022-06-07T13:25:59.988Z] Platform:      win32
+[debug] [2022-06-07T13:25:59.989Z] Node Version:  v16.14.2
+[debug] [2022-06-07T13:25:59.990Z] Time:          Tue Jun 07 2022 18:25:59 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-06-07T13:25:59.990Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-07T13:26:00.109Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-07T13:26:00.109Z] > authorizing via signed-in user (m.hussain7006@gmail.com)
+[debug] [2022-06-07T13:26:00.110Z] [iam] checking project myreact-boiler-plate for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-07T13:26:00.116Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions [none]
+[debug] [2022-06-07T13:26:00.117Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-07T13:26:33.431Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions 200
+[debug] [2022-06-07T13:26:33.433Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-07T13:26:33.440Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate [none]
+[debug] [2022-06-07T13:26:34.259Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate 200
+[debug] [2022-06-07T13:26:34.261Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate {"projectId":"myreact-boiler-plate","projectNumber":"935656405158","displayName":"myreact-boiler-plate","name":"projects/myreact-boiler-plate","resources":{"hostingSite":"myreact-boiler-plate","realtimeDatabaseInstance":"myreact-boiler-plate-default-rtdb","storageBucket":"myreact-boiler-plate.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'myreact-boiler-plate'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-06-07T13:26:34.280Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate [none]
+[debug] [2022-06-07T13:26:35.832Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate 200
+[debug] [2022-06-07T13:26:35.832Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate {"projectId":"myreact-boiler-plate","projectNumber":"935656405158","displayName":"myreact-boiler-plate","name":"projects/myreact-boiler-plate","resources":{"hostingSite":"myreact-boiler-plate","realtimeDatabaseInstance":"myreact-boiler-plate-default-rtdb","storageBucket":"myreact-boiler-plate.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2022-06-07T13:26:35.839Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions [none]
+[debug] [2022-06-07T13:26:35.839Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-06-07T13:26:38.349Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions 200
+[debug] [2022-06-07T13:26:38.350Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions {"name":"projects/935656405158/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[myreact-boiler-plate]: beginning deploy... 
+[info] i  hosting[myreact-boiler-plate]: found 14 files in build 
+[debug] [2022-06-07T13:26:38.411Z] [hosting] uploading with 200 concurrency
+[debug] [2022-06-07T13:26:38.438Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-06-07T13:26:38.439Z] [hosting][hash queue][FINAL] {"max":9,"min":2,"avg":2,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":20}
+[debug] [2022-06-07T13:26:38.441Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa:populateFiles [none]
+[debug] [2022-06-07T13:26:38.442Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa:populateFiles {"files":{"/asset-manifest.json":"acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/index.html":"1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/static/css/main.073c9b0a.css":"8b8f2d87f7737fef44b104fc400af1e51879b3a26e898af1efd53c2420edb289","/static/css/main.073c9b0a.css.map":"f97f67c03a26132ca5220ef76a777db7a862e0cd455deea1e1f79119cdc3b2f5","/static/js/787.8cb7e7aa.chunk.js":"672f121b28f5eed857cf6afdad60024b2cb9e7fec0f34cad9439b217ec405e50","/static/js/787.8cb7e7aa.chunk.js.map":"23e545c46cfa0877fb52cf2ae28ec5ce573e53f0a4bfaa682cc321f8006f94aa","/static/js/main.6b37f30d.js":"27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a","/static/js/main.6b37f30d.js.LICENSE.txt":"0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7","/static/js/main.6b37f30d.js.map":"e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44"}}
+[debug] [2022-06-07T13:26:40.609Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa:populateFiles 200
+[debug] [2022-06-07T13:26:40.609Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa:populateFiles {"uploadRequiredHashes":["0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7","e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44","27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a","1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee","acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files"}
+[debug] [2022-06-07T13:26:40.613Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:26:40.613Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:26:40.615Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:26:40.615Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:26:40.616Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:26:40.616Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:26:40.617Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:26:40.618Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:26:40.619Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:26:40.619Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:26:40.621Z] [hosting][populate queue][FINAL] {"max":2181,"min":2181,"avg":2181,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2189}
+[debug] [2022-06-07T13:26:40.621Z] [hosting] uploads queued: 5
+[debug] [2022-06-07T13:27:01.109Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 502
+[debug] [2022-06-07T13:27:01.109Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:27:01.112Z] [hosting][upload] static/js/main.6b37f30d.js.LICENSE.txt (0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:01.118Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee 502
+[debug] [2022-06-07T13:27:01.119Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:27:01.120Z] [hosting][upload] index.html (1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:01.121Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 502
+[debug] [2022-06-07T13:27:01.121Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:27:01.122Z] [hosting][upload] asset-manifest.json (acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:01.123Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a 502
+[debug] [2022-06-07T13:27:01.123Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:27:01.123Z] [hosting][upload] static/js/main.6b37f30d.js (27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:01.527Z] [uploadQueue] Retrying task 0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7
+[debug] [2022-06-07T13:27:01.529Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:27:01.529Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:27:01.534Z] [uploadQueue] Retrying task e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44
+[debug] [2022-06-07T13:27:01.535Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:27:01.535Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:27:01.537Z] [uploadQueue] Retrying task 1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee
+[debug] [2022-06-07T13:27:01.538Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:27:01.538Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:27:01.540Z] [uploadQueue] Retrying task acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1
+[debug] [2022-06-07T13:27:01.541Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:27:01.541Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:27:01.544Z] [uploadQueue] Retrying task 27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a
+[debug] [2022-06-07T13:27:01.544Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:27:01.544Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:27:14.659Z] [uploadQueue] Retrying task e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44
+[debug] [2022-06-07T13:27:14.660Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:27:14.661Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:27:14.672Z] [uploadQueue] Retrying task 27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a
+[debug] [2022-06-07T13:27:14.673Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:27:14.673Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:27:14.675Z] [uploadQueue] Retrying task acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1
+[debug] [2022-06-07T13:27:14.677Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:27:14.677Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:27:14.679Z] [uploadQueue] Retrying task 1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee
+[debug] [2022-06-07T13:27:14.680Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:27:14.680Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:27:14.683Z] [uploadQueue] Retrying task 0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7
+[debug] [2022-06-07T13:27:14.684Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:27:14.684Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:27:34.878Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a 502
+[debug] [2022-06-07T13:27:34.878Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:27:34.878Z] [hosting][upload] static/js/main.6b37f30d.js (27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:34.896Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 502
+[debug] [2022-06-07T13:27:34.896Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:27:34.897Z] [hosting][upload] asset-manifest.json (acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:34.899Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 502
+[debug] [2022-06-07T13:27:34.899Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:27:34.900Z] [hosting][upload] static/js/main.6b37f30d.js.LICENSE.txt (0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:34.918Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee 502
+[debug] [2022-06-07T13:27:34.918Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:27:34.919Z] [hosting][upload] index.html (1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:27:36.488Z] [uploadQueue] Retrying task 27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a
+[debug] [2022-06-07T13:27:36.490Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:27:36.491Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:27:36.497Z] [uploadQueue] Retrying task acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1
+[debug] [2022-06-07T13:27:36.500Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:27:36.505Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:27:36.511Z] [uploadQueue] Retrying task 0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7
+[debug] [2022-06-07T13:27:36.512Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:27:36.512Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:27:36.520Z] [uploadQueue] Retrying task 1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee
+[debug] [2022-06-07T13:27:36.521Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:27:36.521Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:27:36.525Z] [uploadQueue] Retrying task e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44
+[debug] [2022-06-07T13:27:36.526Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:27:36.526Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/6a8a658857e5a2fa/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:30:02.405Z] ----------------------------------------------------------------------
+[debug] [2022-06-07T13:30:02.412Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hussa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-06-07T13:30:02.413Z] CLI Version:   10.5.0
+[debug] [2022-06-07T13:30:02.414Z] Platform:      win32
+[debug] [2022-06-07T13:30:02.414Z] Node Version:  v16.14.2
+[debug] [2022-06-07T13:30:02.429Z] Time:          Tue Jun 07 2022 18:30:02 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-06-07T13:30:02.430Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-07T13:30:02.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-07T13:30:02.599Z] > authorizing via signed-in user (m.hussain7006@gmail.com)
+[debug] [2022-06-07T13:30:02.600Z] [iam] checking project myreact-boiler-plate for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-07T13:30:02.604Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions [none]
+[debug] [2022-06-07T13:30:02.605Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-07T13:30:42.913Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions 502
+[debug] [2022-06-07T13:30:42.914Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 502 (Server Error)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>502.</b> <ins>That’s an error.</ins>\n  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>\n"
+[debug] [2022-06-07T13:30:42.916Z] [iam] error while checking permissions, command may fail: FirebaseError: Unable to parse JSON: SyntaxError: Unexpected token < in JSON at position 0
+[debug] [2022-06-07T13:30:42.924Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate [none]
+[debug] [2022-06-07T13:30:43.767Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate 200
+[debug] [2022-06-07T13:30:43.768Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate {"projectId":"myreact-boiler-plate","projectNumber":"935656405158","displayName":"myreact-boiler-plate","name":"projects/myreact-boiler-plate","resources":{"hostingSite":"myreact-boiler-plate","realtimeDatabaseInstance":"myreact-boiler-plate-default-rtdb","storageBucket":"myreact-boiler-plate.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'myreact-boiler-plate'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-06-07T13:30:43.781Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate [none]
+[debug] [2022-06-07T13:30:46.752Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate 200
+[debug] [2022-06-07T13:30:46.754Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate {"projectId":"myreact-boiler-plate","projectNumber":"935656405158","displayName":"myreact-boiler-plate","name":"projects/myreact-boiler-plate","resources":{"hostingSite":"myreact-boiler-plate","realtimeDatabaseInstance":"myreact-boiler-plate-default-rtdb","storageBucket":"myreact-boiler-plate.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2022-06-07T13:30:46.766Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions [none]
+[debug] [2022-06-07T13:30:46.766Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-06-07T13:31:03.023Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions 200
+[debug] [2022-06-07T13:31:03.024Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions {"name":"projects/935656405158/sites/myreact-boiler-plate/versions/fc511faef9873b67","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[myreact-boiler-plate]: beginning deploy... 
+[info] i  hosting[myreact-boiler-plate]: found 14 files in build 
+[debug] [2022-06-07T13:31:03.080Z] [hosting] uploading with 200 concurrency
+[debug] [2022-06-07T13:31:04.023Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-06-07T13:31:04.024Z] [hosting][hash queue][FINAL] {"max":920,"min":11,"avg":96.14285714285714,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":939}
+[debug] [2022-06-07T13:31:04.025Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/fc511faef9873b67:populateFiles [none]
+[debug] [2022-06-07T13:31:04.025Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/fc511faef9873b67:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/asset-manifest.json":"acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1","/index.html":"1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee","/static/css/main.073c9b0a.css":"8b8f2d87f7737fef44b104fc400af1e51879b3a26e898af1efd53c2420edb289","/static/css/main.073c9b0a.css.map":"f97f67c03a26132ca5220ef76a777db7a862e0cd455deea1e1f79119cdc3b2f5","/static/js/787.8cb7e7aa.chunk.js":"672f121b28f5eed857cf6afdad60024b2cb9e7fec0f34cad9439b217ec405e50","/static/js/787.8cb7e7aa.chunk.js.map":"23e545c46cfa0877fb52cf2ae28ec5ce573e53f0a4bfaa682cc321f8006f94aa","/static/js/main.6b37f30d.js.LICENSE.txt":"0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7","/static/js/main.6b37f30d.js":"27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a","/static/js/main.6b37f30d.js.map":"e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44"}}
+[debug] [2022-06-07T13:31:30.080Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/fc511faef9873b67:populateFiles 200
+[debug] [2022-06-07T13:31:30.081Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/fc511faef9873b67:populateFiles {"uploadRequiredHashes":["27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a","acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1","e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44","0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7","1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files"}
+[debug] [2022-06-07T13:31:30.089Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:31:30.090Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:31:30.095Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:31:30.096Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:31:30.100Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:31:30.101Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:31:30.105Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:31:30.106Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:31:30.111Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:31:30.111Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:31:30.117Z] [hosting][populate queue][FINAL] {"max":26069,"min":26069,"avg":26069,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":26098}
+[debug] [2022-06-07T13:31:30.118Z] [hosting] uploads queued: 5
+[debug] [2022-06-07T13:31:50.510Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a 502
+[debug] [2022-06-07T13:31:50.511Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:31:50.514Z] [hosting][upload] static/js/main.6b37f30d.js (27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:31:50.537Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 502
+[debug] [2022-06-07T13:31:50.537Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:31:50.539Z] [hosting][upload] asset-manifest.json (acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:31:50.542Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee 502
+[debug] [2022-06-07T13:31:50.542Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:31:50.544Z] [hosting][upload] index.html (1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:31:50.549Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 502
+[debug] [2022-06-07T13:31:50.549Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:31:50.552Z] [hosting][upload] static/js/main.6b37f30d.js.LICENSE.txt (0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:31:50.918Z] [uploadQueue] Retrying task 27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a
+[debug] [2022-06-07T13:31:50.923Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:31:50.923Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:31:50.932Z] [uploadQueue] Retrying task e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44
+[debug] [2022-06-07T13:31:50.935Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:31:50.935Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:31:50.941Z] [uploadQueue] Retrying task acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1
+[debug] [2022-06-07T13:31:50.942Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:31:50.942Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:31:50.948Z] [uploadQueue] Retrying task 1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee
+[debug] [2022-06-07T13:31:50.950Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:31:50.950Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:31:50.958Z] [uploadQueue] Retrying task 0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7
+[debug] [2022-06-07T13:31:50.959Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:31:50.959Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:32:11.153Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 502
+[debug] [2022-06-07T13:32:11.153Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:32:11.168Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee 502
+[debug] [2022-06-07T13:32:11.168Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:32:11.172Z] [hosting][upload] index.html (1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:11.179Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 502
+[debug] [2022-06-07T13:32:11.179Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:32:11.182Z] [hosting][upload] static/js/main.6b37f30d.js.LICENSE.txt (0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:11.191Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a 502
+[debug] [2022-06-07T13:32:11.191Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:32:11.197Z] [hosting][upload] static/js/main.6b37f30d.js (27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:11.211Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 502
+[debug] [2022-06-07T13:32:11.212Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:32:11.215Z] [hosting][upload] asset-manifest.json (acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:11.983Z] [uploadQueue] Retrying task 1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee
+[debug] [2022-06-07T13:32:11.986Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:32:11.986Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:32:11.996Z] [uploadQueue] Retrying task 0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7
+[debug] [2022-06-07T13:32:11.996Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:32:11.997Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:32:12.000Z] [uploadQueue] Retrying task 27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a
+[debug] [2022-06-07T13:32:12.001Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:32:12.001Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:32:12.019Z] [uploadQueue] Retrying task acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1
+[debug] [2022-06-07T13:32:12.020Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:32:12.020Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:32:32.214Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 502
+[debug] [2022-06-07T13:32:32.215Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:32:32.217Z] [hosting][upload] static/js/main.6b37f30d.js.LICENSE.txt (0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:32.220Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee 502
+[debug] [2022-06-07T13:32:32.220Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:32:32.222Z] [hosting][upload] index.html (1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:32.225Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a 502
+[debug] [2022-06-07T13:32:32.225Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:32:32.226Z] [hosting][upload] static/js/main.6b37f30d.js (27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:32.232Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 502
+[debug] [2022-06-07T13:32:32.232Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:32:32.234Z] [hosting][upload] asset-manifest.json (acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:32:33.833Z] [uploadQueue] Retrying task 0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7
+[debug] [2022-06-07T13:32:33.834Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:32:33.835Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:32:33.840Z] [uploadQueue] Retrying task 1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee
+[debug] [2022-06-07T13:32:33.842Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:32:33.842Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:32:33.850Z] [uploadQueue] Retrying task 27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a
+[debug] [2022-06-07T13:32:33.852Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:32:33.852Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:32:33.858Z] [uploadQueue] Retrying task acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1
+[debug] [2022-06-07T13:32:33.859Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:32:33.859Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/fc511faef9873b67/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:33:21.892Z] ----------------------------------------------------------------------
+[debug] [2022-06-07T13:33:21.895Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hussa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-06-07T13:33:21.896Z] CLI Version:   10.5.0
+[debug] [2022-06-07T13:33:21.896Z] Platform:      win32
+[debug] [2022-06-07T13:33:21.896Z] Node Version:  v16.14.2
+[debug] [2022-06-07T13:33:21.897Z] Time:          Tue Jun 07 2022 18:33:21 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-06-07T13:33:21.898Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-07T13:33:22.026Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-07T13:33:22.027Z] > authorizing via signed-in user (m.hussain7006@gmail.com)
+[debug] [2022-06-07T13:33:22.027Z] [iam] checking project myreact-boiler-plate for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-07T13:33:22.031Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions [none]
+[debug] [2022-06-07T13:33:22.031Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-07T13:33:30.615Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions 200
+[debug] [2022-06-07T13:33:30.616Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myreact-boiler-plate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-07T13:33:30.622Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate [none]
+[debug] [2022-06-07T13:33:31.606Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate 200
+[debug] [2022-06-07T13:33:31.607Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate {"projectId":"myreact-boiler-plate","projectNumber":"935656405158","displayName":"myreact-boiler-plate","name":"projects/myreact-boiler-plate","resources":{"hostingSite":"myreact-boiler-plate","realtimeDatabaseInstance":"myreact-boiler-plate-default-rtdb","storageBucket":"myreact-boiler-plate.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'myreact-boiler-plate'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-06-07T13:33:31.627Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate [none]
+[debug] [2022-06-07T13:33:33.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate 200
+[debug] [2022-06-07T13:33:33.140Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myreact-boiler-plate {"projectId":"myreact-boiler-plate","projectNumber":"935656405158","displayName":"myreact-boiler-plate","name":"projects/myreact-boiler-plate","resources":{"hostingSite":"myreact-boiler-plate","realtimeDatabaseInstance":"myreact-boiler-plate-default-rtdb","storageBucket":"myreact-boiler-plate.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2022-06-07T13:33:33.150Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions [none]
+[debug] [2022-06-07T13:33:33.151Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-06-07T13:33:39.004Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions 200
+[debug] [2022-06-07T13:33:39.004Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions {"name":"projects/935656405158/sites/myreact-boiler-plate/versions/84212389b5b97582","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[myreact-boiler-plate]: beginning deploy... 
+[info] i  hosting[myreact-boiler-plate]: found 14 files in build 
+[debug] [2022-06-07T13:33:39.041Z] [hosting] uploading with 200 concurrency
+[debug] [2022-06-07T13:33:39.052Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-06-07T13:33:39.052Z] [hosting][hash queue][FINAL] {"max":4,"min":1,"avg":1,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":8}
+[debug] [2022-06-07T13:33:39.053Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/84212389b5b97582:populateFiles [none]
+[debug] [2022-06-07T13:33:39.053Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/84212389b5b97582:populateFiles {"files":{"/asset-manifest.json":"acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/index.html":"1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/static/css/main.073c9b0a.css":"8b8f2d87f7737fef44b104fc400af1e51879b3a26e898af1efd53c2420edb289","/static/css/main.073c9b0a.css.map":"f97f67c03a26132ca5220ef76a777db7a862e0cd455deea1e1f79119cdc3b2f5","/static/js/787.8cb7e7aa.chunk.js":"672f121b28f5eed857cf6afdad60024b2cb9e7fec0f34cad9439b217ec405e50","/static/js/787.8cb7e7aa.chunk.js.map":"23e545c46cfa0877fb52cf2ae28ec5ce573e53f0a4bfaa682cc321f8006f94aa","/static/js/main.6b37f30d.js":"27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a","/static/js/main.6b37f30d.js.LICENSE.txt":"0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7","/static/js/main.6b37f30d.js.map":"e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44"}}
+[debug] [2022-06-07T13:33:42.139Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/84212389b5b97582:populateFiles 200
+[debug] [2022-06-07T13:33:42.139Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/935656405158/sites/myreact-boiler-plate/versions/84212389b5b97582:populateFiles {"uploadRequiredHashes":["0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7","acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1","27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a","e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44","1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files"}
+[debug] [2022-06-07T13:33:42.151Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:33:42.151Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:33:42.157Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:33:42.158Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:33:42.163Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:33:42.163Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:33:42.167Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:33:42.168Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:33:42.171Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:33:42.171Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:33:42.174Z] [hosting][populate queue][FINAL] {"max":3102,"min":3102,"avg":3102,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":3126}
+[debug] [2022-06-07T13:33:42.175Z] [hosting] uploads queued: 5
+[debug] [2022-06-07T13:34:02.791Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 502
+[debug] [2022-06-07T13:34:02.791Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:34:02.794Z] [hosting][upload] static/js/main.6b37f30d.js.map (e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:34:02.799Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 502
+[debug] [2022-06-07T13:34:02.800Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:34:02.803Z] [hosting][upload] static/js/main.6b37f30d.js.LICENSE.txt (0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:34:02.805Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee 502
+[debug] [2022-06-07T13:34:02.806Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:34:02.808Z] [hosting][upload] index.html (1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:34:02.812Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a 502
+[debug] [2022-06-07T13:34:02.812Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:34:02.815Z] [hosting][upload] static/js/main.6b37f30d.js (27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:34:02.818Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 502
+[debug] [2022-06-07T13:34:02.818Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
+[debug] [2022-06-07T13:34:02.821Z] [hosting][upload] asset-manifest.json (acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1) HTTP ERROR 502: headers={} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2022-06-07T13:34:03.209Z] [uploadQueue] Retrying task e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44
+[debug] [2022-06-07T13:34:03.215Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [none]
+[debug] [2022-06-07T13:34:03.215Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/e00418f415895b10457d259372fd2ccb5fb757d4b2ed1f1a86c87846f3848f44 [stream]
+[debug] [2022-06-07T13:34:03.221Z] [uploadQueue] Retrying task 0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7
+[debug] [2022-06-07T13:34:03.224Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [none]
+[debug] [2022-06-07T13:34:03.225Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/0b94141b9f7120ec4304eb91142d3521d0fedd96dad46e7ba2e65c55455240c7 [stream]
+[debug] [2022-06-07T13:34:03.230Z] [uploadQueue] Retrying task 1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee
+[debug] [2022-06-07T13:34:03.233Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [none]
+[debug] [2022-06-07T13:34:03.233Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/1f6b3846865a245ada99f06e362f7393f7acf1c6a3760035e3291d228c52d5ee [stream]
+[debug] [2022-06-07T13:34:03.241Z] [uploadQueue] Retrying task 27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a
+[debug] [2022-06-07T13:34:03.243Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [none]
+[debug] [2022-06-07T13:34:03.244Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/27c4a0724da19036e7a96399342d1d38fe3123cde736585e75ffcd61dc22f10a [stream]
+[debug] [2022-06-07T13:34:03.249Z] [uploadQueue] Retrying task acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1
+[debug] [2022-06-07T13:34:03.251Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [none]
+[debug] [2022-06-07T13:34:03.252Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myreact-boiler-plate/versions/84212389b5b97582/files/acf603a40e38239ee6ee022c7162b1c57895b3f1739b0a4993421b9414d97df1 [stream]
