@@ -7,6 +7,7 @@ function Home() {
     const [users, setUsers] = useState([]);
     const params = useParams();
     const navigate = useNavigate();
+    const [todos, setTodos] = useState([]);
 
     useEffect(() => {
 
@@ -18,7 +19,11 @@ function Home() {
 
         getData('todos').then((snapshot) => {
             if (snapshot.exists()) {
-                console.log(snapshot.val());
+
+                // setTodos([snapshot.val()])               // if getting data by id then use this
+                let Todos = Object.values(snapshot.val());  // if getting complete data then use this
+                setTodos(Todos)
+
             } else {
                 console.log("No data available");
             }
@@ -41,6 +46,10 @@ function Home() {
                         <Typography variant='h4'>Loading...</Typography>
                     </Box>
                 } */}
+                <ul>
+                    {todos.length ? todos.map((e, i) => <li key={i}>{e.todo}</li>)
+                        : <Typography variant='h3'>Loading...</Typography>}
+                </ul>
             </Box>
         </Box>
     )
